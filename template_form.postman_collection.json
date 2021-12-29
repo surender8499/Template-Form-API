@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "9164b892-2b5a-4224-b181-1927246b8889",
+		"name": "template_form",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "template_create",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"createdby\": \"2\",\n    \"templateName\": \"Test1\",\n    \"templateData\": [\n                {\n                \"field_name\": \"Name\",\n                \"type\": \"text\",\n                \"options\": null,\n                \"mandatory\": true\n                },\n                {\n                \"field_name\": \"Gender\",\n                \"type\": \"single Select\",\n                \"options\": \"Male, Female\",\n                \"mandatory\": true\n                },\n                {\n                \"field_name\": \"Age\",\n                \"type\": \"number\",\n                \"options\": null,\n                \"mandatory\": false\n                },\n                {\n                \"field_name\": \"Date of \",\n                \"type\": \"date\",\n                \"options\": null,\n                \"mandatory\": false\n                }\n                ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/template/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"template",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "template_delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"createdby\": \"2\",\n    \"templateName\": \"Test\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/template/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"template",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "template_update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"createdby\": \"1\",\n    \"templateName\": \"Test\",\n    \"templateData\": [\n                {\n                \"field_name\": \"Name\",\n                \"type\": \"text\",\n                \"options\": null,\n                \"mandatory\": true\n                },\n                {\n                \"field_name\": \"Gender\",\n                \"type\": \"single Select\",\n                \"options\": \"Male, Female\",\n                \"mandatory\": true\n                },\n                {\n                \"field_name\": \"Age\",\n                \"type\": \"number\",\n                \"options\": null,\n                \"mandatory\": false\n                },\n                {\n                \"field_name\": \"Date of \",\n                \"type\": \"date\",\n                \"options\": null,\n                \"mandatory\": false\n                }\n                ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/template/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"template",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "template_get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/template/?createdby=1&templateName=Test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"template",
+						""
+					],
+					"query": [
+						{
+							"key": "createdby",
+							"value": "1"
+						},
+						{
+							"key": "templateName",
+							"value": "Test"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
